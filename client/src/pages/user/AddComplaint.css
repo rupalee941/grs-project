@@ -1,0 +1,151 @@
+.complaint-modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px);
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.complaint-modal-card {
+  background:white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.complaint-modal-card h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.complaint-field-group {
+  margin-bottom: 25px;
+}
+
+.complaint-field-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 20px;
+}
+
+.complaint-select,
+.complaint-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 18px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.complaint-select:focus,
+.complaint-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.complaint-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  padding-right: 40px;
+}
+
+.complaint-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.file-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.file-label:hover {
+  background-color: #e9ecef;
+  border-color: #999;
+}
+
+.file-name {
+  color: #666;
+  font-size: 14px;
+  flex: 1;
+  word-break: break-word;
+}
+
+.complaint-button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.submit-complaint-btn {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  padding: 12px 50px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.submit-complaint-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.submit-complaint-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .complaint-modal-card {
+    padding: 25px;
+  }
+
+  .complaint-modal-card h2 {
+    font-size: 22px;
+  }
+
+  .file-input-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .submit-complaint-btn {
+    width: 100%;
+  }
+}

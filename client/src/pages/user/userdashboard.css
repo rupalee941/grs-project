@@ -1,0 +1,206 @@
+/* Student Dashboard Styling */
+
+.student-dashboard {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Sidebar Customizations */
+.student-sidebar {
+  background-color: #1c2d37 !important; /* Specific student portal color */
+}
+
+.logo-student {
+  background-color: #3b82f6 !important; /* Blue background for graduation cap */
+}
+
+.student-sidebar .menu li.active {
+  background-color: #16242c !important;
+  border-left: 4px solid #14b8a6 !important; /* Teal border for student portal active item */
+  color: #fff !important;
+}
+
+.student-sidebar .menu li:hover:not(.active) {
+  background-color: #243946 !important;
+}
+
+.student-sidebar .logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  color: #f8fafc;
+  cursor: pointer;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.student-sidebar .logout:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Topbar Customizations */
+.student-topbar {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.student-greeting strong {
+  font-size: 22px;
+  color: #1e293b;
+}
+
+.student-profile-icon {
+  background-color: #3b82f6 !important; /* Match profile icon color to logo */
+}
+
+.student-topbar .time h6 {
+  font-size: 18px;
+  color: #334155;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Main Dashboard Cards Container */
+.student-dashboard-container {
+  padding: 50px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Custom Glowing Card Design */
+.student-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  min-height: 320px;
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.22); /* Glowing blue/indigo shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(99, 102, 241, 0.05);
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(99, 102, 241, 0.35); /* Increased glow on hover */
+}
+
+/* Pill badge at top of cards */
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #1d68e1; /* Vivid blue */
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 5px 6px 5px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(29, 104, 225, 0.15);
+}
+
+.badge-text {
+  margin-right: 10px;
+  letter-spacing: 0.3px;
+}
+
+.badge-count {
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-weight: 700;
+  font-size: 15px;
+  min-width: 26px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Card titles */
+.student-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 15px 0;
+}
+
+/* Pink/Magenta Icons */
+.card-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  color: #ec4899; /* Vibrant Pink/Magenta */
+}
+
+.card-icon-container i {
+  font-size: 48px;
+}
+
+/* Teal Check Button */
+.check-btn {
+  background-color: #14b8a6; /* Teal color */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 26px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(20, 184, 166, 0.2);
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+  width: fit-content;
+}
+
+.check-btn:hover {
+  background-color: #0d9488; /* Darker teal */
+  box-shadow: 0 6px 14px rgba(20, 184, 166, 0.35);
+  transform: scale(1.03);
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .student-dashboard {
+    flex-direction: column;
+  }
+  
+  .student-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .content {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .student-dashboard-container {
+    padding: 30px 15px;
+  }
+  
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
